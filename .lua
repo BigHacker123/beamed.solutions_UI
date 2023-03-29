@@ -4791,6 +4791,10 @@ function library:CreateSettingsTab(menu)
            end
        end})
 
+   mainSection:AddButton({text = 'Force Close', callback = function()
+        window:SetOpen(false);
+    end})
+
     mainSection:AddSeparator({text = 'Indicators'});
 
     mainSection:AddToggle({text = 'Watermark', flag = 'watermark_enabled', state = true,});
