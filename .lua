@@ -4791,7 +4791,7 @@ function library:CreateSettingsTab(menu)
            end
        end})
 
-   mainSection:AddButton({text = 'Force Close', callback = function()
+   mainSection:AddButton({text = 'Force Close', confirm = true, callback = function()
         library:SetOpen(false);
     end})
 
