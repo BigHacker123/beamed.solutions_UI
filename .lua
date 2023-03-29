@@ -4845,5 +4845,9 @@ themeSection:AddList({text = 'Presets', flag = 'preset_theme', values = themeStr
     return settingsTab;
 end
 
+local creditsSection = settingsTab:AddSection('Credits', 1);
+creditsSection:AddSeparator({text = 'Owner'});
+creditsSection:AddText({text = "-[beamed]-#9395"})
+
 getgenv().library = library
 return library
