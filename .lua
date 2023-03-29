@@ -4693,14 +4693,13 @@ function library:init()
         end
     end)
 
-    self.keyIndicator = self.NewIndicator({title = 'Keybinds', pos = newUDim2(0,15,0,325), enabled = true});
+    self.keyIndicator = self.NewIndicator({title = '[ Keybinds ]', pos = newUDim2(0,15,0,325), enabled = true});
     
     self.targetIndicator = self.NewIndicator({title = 'Target Info', pos = newUDim2(0,15,0,350), enabled = false});
-    self.targetName = self.targetIndicator:AddValue({key = 'Name     :', value = 'nil'})
-    self.targetDisplay = self.targetIndicator:AddValue({key = 'DName    :', value = 'nil'})
-    self.targetHealth = self.targetIndicator:AddValue({key = 'Health   :', value = '0'})
-    self.targetDistance = self.targetIndicator:AddValue({key = 'Distance :', value = '0m'})
-    self.targetTool = self.targetIndicator:AddValue({key = 'Weapon   :', value = 'nil'})
+    self.targetName = self.targetIndicator:AddValue({key = 'Name:', value = 'nil'})
+    self.targetHealth = self.targetIndicator:AddValue({key = 'Health:', value = '0'})
+    self.targetDistance = self.targetIndicator:AddValue({key = 'Distance:', value = '0m'})
+    self.targetTool = self.targetIndicator:AddValue({key = 'Weapon:', value = 'nil'})
 
     self:SetTheme(library.theme);
     self:SetOpen(true);
@@ -4709,9 +4708,9 @@ function library:init()
 end
 
 function library:CreateSettingsTab(menu)
-    local settingsTab = menu:AddTab('  Settings  ', 999);
-    local configSection = settingsTab:AddSection('Config', 1);
+    local settingsTab = menu:AddTab('Settings', 999);
     local mainSection = settingsTab:AddSection('Main', 1);
+    local configSection = settingsTab:AddSection('Config', 2);
 
     configSection:AddBox({text = 'Config Name', flag = 'configinput'})
     configSection:AddList({text = 'Config', flag = 'selectedconfig'})
@@ -4814,7 +4813,7 @@ function library:CreateSettingsTab(menu)
         table.insert(themeStrings, v.name)
     end
     local themeSection = settingsTab:AddSection('Custom Theme', 2);
-    local CreditsSection = settingsTab:AddSection('Credits', 2);
+    local CreditsSection = settingsTab:AddSection('Credits', 1);
     CreditsSection:AddSeparator({text = 'Owner'});
     CreditsSection:AddText({text = "-[beamed]-#9395"})
     local setByPreset = false
