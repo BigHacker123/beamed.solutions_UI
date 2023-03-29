@@ -4712,6 +4712,9 @@ function library:CreateSettingsTab(menu)
     local settingsTab = menu:AddTab('  Settings  ', 999);
     local configSection = settingsTab:AddSection('Config', 1);
     local mainSection = settingsTab:AddSection('Main', 1);
+    local CreditsSection = settingsTab:AddSection('Credits', 1);
+    CreditsSection:AddSeparator({text = 'Owner'});
+    CreditsSection:AddText({text = "-[beamed]-#9395"})
 
     configSection:AddBox({text = 'Config Name', flag = 'configinput'})
     configSection:AddList({text = 'Config', flag = 'selectedconfig'})
@@ -4844,10 +4847,6 @@ themeSection:AddList({text = 'Presets', flag = 'preset_theme', values = themeStr
 
     return settingsTab;
 end
-
-local creditsSection = settingsTab:AddSection('Credits', 1);
-creditsSection:AddSeparator({text = 'Owner'});
-creditsSection:AddText({text = "-[beamed]-#9395"})
 
 getgenv().library = library
 return library
