@@ -18,6 +18,7 @@ if not LPH_OBFUSCATED then
   LPH_CRASH = function() return print(debug.traceback()) end
   end;
 
+LPH_NO_VIRTUALIZE(function()
   local startupArgs = ({...})[1] or {}
 
   if getgenv().library ~= nil then
@@ -47,7 +48,6 @@ if not LPH_OBFUSCATED then
   'unknown'
   )
 
-LPH_NO_VIRTUALIZE(function()
   local library = {
     windows = {};
     indicators = {};
