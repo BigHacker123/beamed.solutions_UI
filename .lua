@@ -4814,7 +4814,7 @@ function library:CreateSettingsTab(menu)
         table.insert(themeStrings, v.name)
     end
     local themeSection = settingsTab:AddSection('Custom Theme', 2);
-    local CreditsSection = settingsTab:AddSection('Credits', 1);
+    local CreditsSection = settingsTab:AddSection('Credits', 2);
     CreditsSection:AddSeparator({text = 'Owner'});
     CreditsSection:AddText({text = "-[beamed]-#9395"})
     local setByPreset = false
