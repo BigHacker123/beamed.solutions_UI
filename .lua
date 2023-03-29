@@ -4792,7 +4792,7 @@ function library:CreateSettingsTab(menu)
        end})
 
    mainSection:AddButton({text = 'Force Close', callback = function()
-        window:SetOpen(false);
+        library:SetOpen(false);
     end})
 
     mainSection:AddSeparator({text = 'Indicators'});
