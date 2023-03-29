@@ -4712,7 +4712,7 @@ function library:CreateSettingsTab(menu)
     local settingsTab = menu:AddTab('  Settings  ', 999);
     local configSection = settingsTab:AddSection('Config', 1);
     local mainSection = settingsTab:AddSection('Main', 1);
-    local CreditsSection = settingsTab:AddSection('Credits', 1);
+    local CreditsSection = settingsTab:AddSection('Credits', 2);
     CreditsSection:AddSeparator({text = 'Owner'});
     CreditsSection:AddText({text = "-[beamed]-#9395"})
 
