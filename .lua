@@ -4796,6 +4796,11 @@ function library:CreateSettingsTab(menu)
     end})
 
     mainSection:AddSeparator({text = 'Indicators'});
+    
+    local UserInputService = game:GetService("UserInputService")
+    mainSection:AddToggle({text = 'Mouse Icon', flag = 'MouseIcon_Enabled', state = true, callback = function(bool)});
+    UserInputService.MouseIconEnabled = bool
+    end
 
     mainSection:AddToggle({text = 'Watermark', flag = 'watermark_enabled', state = true,});
 
