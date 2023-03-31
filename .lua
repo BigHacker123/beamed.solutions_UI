@@ -4799,9 +4799,9 @@ function library:CreateSettingsTab(menu)
     
     local UserInputService = game:GetService("UserInputService")
     
-    mainSection:AddToggle({text = 'Mouse Icon', flag = 'MouseIcon_Enabled', state = true, callback = function(bool);
+    mainSection:AddToggle({text = 'Mouse Icon', flag = 'MouseIcon_Enabled', state = true, callback = function(bool)
     UserInputService.MouseIconEnabled = bool
-    end)
+    end})
 
     mainSection:AddToggle({text = 'Watermark', flag = 'watermark_enabled', state = true,});
 
